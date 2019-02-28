@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	  layout:decorator="@{~/base/layout}">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content="Blog www.ciceroednilson.com.br"/>
+	<meta name="author" content="Cícero Ednilson"/>
+ 
+	<title>Consultar Registros</title>
+</head>
+<body>
+ 
+<section layout:fragment="content">
+ 
+    <!-- MONTANDO O GRID PARA POSICIONAR O FORMULÁRIO NO CENTRO -->   
+   <div class="mdl-grid">   
+    <div class="mdl-layout-spacer"></div>    
+    <section class="section--center mdl-grid mdl-shadow--4dp mdl-color--white">
+ 
+    <div class="mdl-cell mdl-cell--12-col">
+       <div class="alinhar-centro">
+	   <i class="material-icons mdl-list__item-avatar">person</i>
+	   <span style="padding-left:5px;">Consultar Usuários Cadastrados</span>			  
+       </div>
+ 
+       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+       <!-- CABEÇALHO DA TABELA -->
+       <thead>
+	  <tr>
+	    <th class="mdl-data-table__cell--non-numeric">Nome</th>
+	   </tr>
+	</thead>
+	<tbody>
+	<!-- PREENCHENDO A TABELA COM OS USUÁRIOS CADASTRADOS-->
+	<th:block th:each="playlist : ${playlists}">
+	   <tr>
+	    <td th:text="${playlist.nome}" class="mdl-data-table__cell--non-numeric"></td>
+       </tr>
+      </th:block>	
+   </tbody>	
+</table>
+ 
+ 
+</div>
+ 
+</section>	
+<div class="mdl-layout-spacer"></div>
+</div>
+ 
+</section>
+ 
+</body>
+</html>
