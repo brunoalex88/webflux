@@ -1,0 +1,5 @@
+package com.api.rest.document;
+
+public class Playlist {
+
+}

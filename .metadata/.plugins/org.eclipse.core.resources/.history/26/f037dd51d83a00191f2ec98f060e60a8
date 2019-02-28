@@ -1,0 +1,1 @@
+spring.data.mongodb.uri=mongodb://obruno:obruno@ds121495.mlab.com:21495/heroku_vrm0kq5k

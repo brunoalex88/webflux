@@ -1,0 +1,25 @@
+package com.api.rest;
+
+import java.util.UUID;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.api.rest.document.Playlist;
+import com.api.rest.repository.PlaylistRepository;
+
+public class DummyData implements CommandLineRunner {
+
+	private final PlaylistRepository playlistRepository;
+
+	DummyData(PlaylistRepository playlistRepository) {
+		this.playlistRepository = playlistRepository;
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Playlist playlist = new Playlist(UUID.randomUUID().toString(), "Bruno");
+		playlistRepository.save(playlist).subscribe();
+	}
+
+}

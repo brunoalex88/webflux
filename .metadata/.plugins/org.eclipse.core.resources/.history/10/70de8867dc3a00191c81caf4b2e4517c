@@ -1,0 +1,1 @@
+spring.data.mongodb.urimongodb+srv://obruno:obruno@clusterwebflux-ut11t.mongodb.net/test?retryWrites=true

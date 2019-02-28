@@ -1,0 +1,23 @@
+package com.api.rest.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.api.rest.document.Playlist;
+import com.api.rest.service.PlaylistService;
+
+import reactor.core.publisher.Flux;
+
+@RestController
+public class PlaylistController {
+
+	@Autowired
+	private PlaylistService playlistService;
+	
+	@GetMapping("/playlist")
+	public Flux<Playlist> getPlaylists() {
+		return playlistService.findAll();
+	}
+	
+}

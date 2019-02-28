@@ -1,0 +1,11 @@
+package com.api.rest.service;
+
+import com.api.rest.document.Playlist;
+
+import reactor.core.publisher.Flux;
+
+public interface PlaylistService {
+
+	Flux<Playlist> findAll();
+	
+}
