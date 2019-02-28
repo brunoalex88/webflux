@@ -1,5 +1,0 @@
-package com.api.rest.repository;
-
-public class PlaylistRepository {
-
-}
