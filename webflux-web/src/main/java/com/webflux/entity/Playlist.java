@@ -31,4 +31,9 @@ public class Playlist {
 		this.nome = nome;
 	}
 
+	@Override
+	public String toString() {
+		return "Playlist [id=" + id + ", nome=" + nome + "]";
+	}
+	
 }
